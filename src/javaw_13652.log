@@ -1,0 +1,11 @@
+---
+VM version: Feb  8 2018 12:09:10 - 81_REL - optU - windows amd64 - 6 - bas2:301195 (mixed mode)
+
+Time:2019-05-0521:21:23
+Pid: 13652
+Hostname: WDFN34222713A
+current dir: C:\Users\D070334\Documents\Fowler_Refactoring\src
+---
+   :    [484]   21:21:23 ***ERROR (:0): Java assert: "
+Expected: is "Rental Record for Charlie\n\tTitle\t\tDays\tAmount\n\tTitanic\t\t3\t3.5\n\tMary Poppins\t\t5\t15.0\n\tE.T.\t\t10\t12.0\n\tFrozen\t\t7\t7.5\nAmount owed is 38.0\nYou earned 5 frequent renter points"
+     but: was "Rental Record for Charlie\n\tTitle\t\tDays\tAmount\n\tTitanic\t\t3\t3.5\n\tMary Poppins\t\t5\t6.5\n\tE.T.\t\t10\t14.0\n\tFrozen\t\t7\t9.5\nAmount owed is 33.5\nYou earned 4 frequent renter points"" in org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
