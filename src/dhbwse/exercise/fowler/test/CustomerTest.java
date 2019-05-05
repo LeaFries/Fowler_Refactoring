@@ -23,20 +23,27 @@ public class CustomerTest {
     void testing(){
         customer = new Customer("Charlie");
         fillRentalList();
+        
+        for (Rental nextRental : rentals) {
+          customer.addRental(nextRental);
+        }
 
         String result = "Rental Record for " + customer.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
-
-        for (Rental nextRental : rentals) {
-            result += "\t" + nextRental.getMovie().getTitle()
-                    + "\t" + "\t" + nextRental.getDaysRented()
-                    + "\t" + nextRental.getCharge() + "\n";
-            customer.addRental(nextRental);
-        }
-
-        result += "Amount owed is " + "33.0" + "\n"
-                + "You earned " + "5" + " frequent renter points";
-
+        result += "\tTitanic\t\t3\t3.5\n"
+        		+ "\tMary Poppins\t\t5\t15.0\n"
+        		+ "\tE.T.\t\t10\t12.0\n"
+        		+ "\tFrozen\t\t7\t7.5\n"
+        		+ "Amount owed is 38.0\n"
+        		+ "You earned 5 frequent renter points";
+        
+//        for (Rental nextRental : rentals) {
+//            result += "\t" + nextRental.getMovie().getTitle()
+//                    + "\t" + "\t" + nextRental.getDaysRented()
+//                    + "\t" + nextRental.getCharge() + "\n";
+//            customer.addRental(nextRental);
+//        }
+        
         assertThat(customer.statement(), Is.is(result));
         //Assertions.assertEquals(customer.statement(), result);
     }
