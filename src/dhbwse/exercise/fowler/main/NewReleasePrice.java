@@ -1,3 +1,5 @@
+package dhbwse.exercise.fowler.main;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Berkling
