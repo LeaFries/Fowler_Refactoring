@@ -1,15 +1,15 @@
 package dhbwse.exercise.fowler.test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import dhbwse.exercise.fowler.main.Customer;
 import dhbwse.exercise.fowler.main.Movie;
 import dhbwse.exercise.fowler.main.Rental;
-import org.hamcrest.core.Is;
-import org.junit.Test;
+
+import static org.junit.Assert.assertThat;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertThat;
+import org.hamcrest.core.Is;
+import org.junit.jupiter.api.Test;
 
 //import org.junit.jupiter.api.Assertions;
 
@@ -34,7 +34,7 @@ public class CustomerTest {
             customer.addRental(nextRental);
         }
 
-        result += "Amount owed is " + "38" + "\n"
+        result += "Amount owed is " + "33.0" + "\n"
                 + "You earned " + "5" + " frequent renter points";
 
         assertThat(customer.statement(), Is.is(result));
