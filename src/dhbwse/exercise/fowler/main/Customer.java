@@ -19,7 +19,6 @@ public class Customer {
 	}
 
 	public String statement() {
-		double totalAmount = 0;
 		Enumeration rentals = this.rentals.elements();
 		String result = "Rental Record for " + this.getName() + "\n";
 		result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
@@ -29,7 +28,6 @@ public class Customer {
 			// show figures for this rental
 			result += "\t" + each.getMovie().getTitle() + "\t" + "\t" + each.getDaysRented() + "\t"
 					+ each.getCharge() + "\n";
-			totalAmount += each.getCharge();
 		}
 		// add footer lines
 		result += "Amount owed is " + getTotalCharge() + "\n";
