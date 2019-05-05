@@ -11,9 +11,6 @@ import java.util.ArrayList;
 import org.hamcrest.core.Is;
 import org.junit.jupiter.api.Test;
 
-//import org.junit.jupiter.api.Assertions;
-
-
 public class CustomerTest {
 
     private Customer customer;
