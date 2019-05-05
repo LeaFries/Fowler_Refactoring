@@ -46,8 +46,7 @@ public class Customer {
 		}
 		//add footer lines
 		result += "<P>You owe <EM>" + getTotalCharge() + "</EM><P>\n";
-		result += "On this rental you earned <EM>" +
-		getTotalFrequentRenterPoints() + "</EM> frequent renter points<P>";
+		result += "On this rental you earned <EM>" + getTotalFrequentRenterPoints() + "</EM> frequent renter points<P>";
 		return result;
 	}
 	
